@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🛒 TechStore</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h2>Welcome to TechStore</h2>
+            <p>Your one-stop shop for quality tech products</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-filter">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search products...">
+                <button id="search-btn">Search</button>
+            </div>
+            <div class="filter-box">
+                <label for="category-filter">Category:</label>
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                </select>
+            </div>
+        </section>
+
+        <section id="products-section">
+            <h2>Our Products</h2>
+            <div id="products-grid" class="products-grid">
+                <div class="loading">Loading products...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TechStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

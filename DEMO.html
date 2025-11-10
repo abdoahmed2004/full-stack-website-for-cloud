@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Application Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .feature-card {
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .feature-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        .feature-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .feature-card li {
+            padding: 0.5rem 0;
+            color: #555;
+        }
+        .feature-card li:before {
+            content: "✓ ";
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .tech-stack {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .tech-stack h2 {
+            margin-bottom: 1rem;
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .tech-item {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .pages {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .page-card {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .page-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        .page-header {
+            background: #667eea;
+            color: white;
+            padding: 1rem;
+            font-weight: bold;
+        }
+        .page-content {
+            padding: 1.5rem;
+        }
+        .discount-codes {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .discount-codes h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+        .code {
+            display: inline-block;
+            background: #856404;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin: 0.5rem;
+            font-family: monospace;
+            font-weight: bold;
+        }
+        .deployment {
+            background: #d1ecf1;
+            border: 2px solid #0c5460;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        .deployment h2 {
+            color: #0c5460;
+            margin-bottom: 1rem;
+        }
+        .deployment-step {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 4px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #eee;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛒 TechStore - Full Stack E-Commerce Website</h1>
+        <p class="subtitle">A complete e-commerce solution with HTML/CSS/JavaScript frontend and PHP backend, ready for AWS deployment</p>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Frontend Features</h3>
+                <ul>
+                    <li>4 Responsive Pages</li>
+                    <li>Product Catalog</li>
+                    <li>Search & Filter</li>
+                    <li>Shopping Cart</li>
+                    <li>Checkout Process</li>
+                    <li>Form Validation</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <h3>Backend Features</h3>
+                <ul>
+                    <li>RESTful API</li>
+                    <li>Session Management</li>
+                    <li>Stock Validation</li>
+                    <li>Discount Codes</li>
+                    <li>Tax Calculation</li>
+                    <li>Order Processing</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <h3>AWS Deployment</h3>
+                <ul>
+                    <li>EC2 for Backend</li>
+                    <li>S3 for Frontend</li>
+                    <li>Deployment Scripts</li>
+                    <li>Complete Documentation</li>
+                    <li>CloudFront Ready</li>
+                    <li>Cost Optimized</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h2>Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">HTML5</div>
+                <div class="tech-item">CSS3</div>
+                <div class="tech-item">JavaScript ES6+</div>
+                <div class="tech-item">PHP 7.4+</div>
+                <div class="tech-item">AWS EC2</div>
+                <div class="tech-item">AWS S3</div>
+            </div>
+        </div>
+
+        <h2 style="margin-bottom: 1.5rem; color: #2c3e50;">Application Pages</h2>
+        <div class="pages">
+            <div class="page-card">
+                <div class="page-header">Home / Products Page</div>
+                <div class="page-content">
+                    <strong>File:</strong> <code>frontend/index.html</code><br><br>
+                    Features product grid, search functionality, and category filtering. Displays 10 tech products across 2 categories.
+                </div>
+            </div>
+            <div class="page-card">
+                <div class="page-header">Product Details Page</div>
+                <div class="page-content">
+                    <strong>File:</strong> <code>frontend/product.html</code><br><br>
+                    Shows detailed product information, stock availability, and quantity selector with add to cart functionality.
+                </div>
+            </div>
+            <div class="page-card">
+                <div class="page-header">Shopping Cart Page</div>
+                <div class="page-content">
+                    <strong>File:</strong> <code>frontend/cart.html</code><br><br>
+                    Manages cart items with update/remove capabilities. Shows real-time price calculations including tax and shipping.
+                </div>
+            </div>
+            <div class="page-card">
+                <div class="page-header">Checkout Page</div>
+                <div class="page-content">
+                    <strong>File:</strong> <code>frontend/checkout.html</code><br><br>
+                    Complete checkout form with validation, discount code application, and order confirmation.
+                </div>
+            </div>
+        </div>
+
+        <div class="discount-codes">
+            <h3>🎁 Available Discount Codes</h3>
+            <p>Use these codes at checkout:</p>
+            <span class="code">SAVE10</span> - 10% off entire order
+            <span class="code">SAVE20</span> - 20% off entire order
+            <span class="code">FLAT15</span> - $15 flat discount
+            <span class="code">WELCOME</span> - 5% off for new customers
+        </div>
+
+        <div class="deployment">
+            <h2>🚀 Deployment Instructions</h2>
+            <div class="deployment-step">
+                <strong>Step 1: Deploy Backend to EC2</strong><br>
+                Run: <code>./aws/deploy-backend.sh</code><br>
+                This deploys PHP backend to Amazon EC2 with Apache server
+            </div>
+            <div class="deployment-step">
+                <strong>Step 2: Update Frontend Configuration</strong><br>
+                Update <code>frontend/js/config.js</code> with your EC2 IP address
+            </div>
+            <div class="deployment-step">
+                <strong>Step 3: Deploy Frontend to S3</strong><br>
+                Run: <code>./aws/deploy-frontend.sh</code><br>
+                This deploys static files to Amazon S3 with static website hosting
+            </div>
+        </div>
+
+        <h2 style="margin: 2rem 0 1rem; color: #2c3e50;">📊 API Endpoints</h2>
+        <div class="feature-card">
+            <strong>Products API:</strong>
+            <ul>
+                <li>GET /products.php?action=list - List all products</li>
+                <li>GET /products.php?action=get&id={id} - Get product details</li>
+                <li>GET /products.php?action=search&q={query} - Search products</li>
+                <li>GET /products.php?action=categories - Get categories</li>
+            </ul>
+        </div>
+        <div class="feature-card" style="margin-top: 1rem;">
+            <strong>Cart & Checkout API:</strong>
+            <ul>
+                <li>GET /cart.php?action=get - Get cart contents</li>
+                <li>POST /cart.php?action=add - Add item to cart</li>
+                <li>POST /cart.php?action=update - Update cart item</li>
+                <li>POST /cart.php?action=remove - Remove from cart</li>
+                <li>POST /checkout.php - Process order</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p><strong>Documentation:</strong> See README.md, DEPLOYMENT.md, and TESTING.md for complete details</p>
+            <p style="margin-top: 1rem;">© 2025 TechStore - Full Stack E-Commerce Application</p>
+        </div>
+    </div>
+</body>
+</html>
